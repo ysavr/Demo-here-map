@@ -20,6 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AreaActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,14 +31,13 @@
 
         <meta-data
             android:name="com.here.android.maps.appid"
-            android:value="-replace your own key-" />
+            android:value="WY0kz4rr7SJ6A0SQfhLK" />
         <meta-data
             android:name="com.here.android.maps.apptoken"
-            android:value="-replace your own key-" />
+            android:value="ko-yvlCyH6iKOME10UUhjA" />
         <meta-data
             android:name="com.here.android.maps.license.key"
-            android:value="-replace your own key-" />
-
+            android:value="GzY0i5T2WjQJawDdEEUx59Vjd3g7OxWuCdpsv1btOyNDI4jEWHKL85MlWi9RXPY/Rm6VYfUQ8GEoCQtr34SY2wfUHVFzBtK8VVIY5Qp3ZkMrQMBMjNZtQaCLBFg2TQ1PgCpP0IJCv6nN+wO047WAZ5Q2XyQToj02/ud/T42zPwByTztTRN6Rsx0yE2qBbkVrOM/37Fe1mAyuxAwUVTsUaMy0v4ogzAiCgh7YlwpLdlQArTXB1SRnbLiF/Yh/Bueg4wUWZphHRxApwn2bk5+gnyCR0yVJhx7wNfIGRE4f1A//jCh3H7wrTUdwKUxxNgmhK/AZMU8mphqo7eis0dDy0iIWxdwlQb66xn+aG1qDD4pzYtG2OqJP7pG4aVkdYEw97IAw5VntmZniDTKuEV2GB27ozMXzQ9OIk4HpjG331iiNqZF0jf6Aq4S5Iysfvbzgkrk26pkDTiI/GcLfyl/1pU7/6Sfc3qxp1WspQeqPfmt80AuYh85Egr+EYZTYTjCFBbKmcmeRwBhNUrSygC6YaRBudpy934hD6rMmq8Wn45uaNvdSlRszPZwPQPsDHcO5BniWFtg6LIN/cU/orROjO9sgUwLLC4xtUcRcpSyvbpUTJNIb4YfC9fo6jBaWobHjV8DYmagzA6+XoullVSIynXuGTIoWexOaPkyKmLCGuNc=" />
         <meta-data
             android:name="INTENT_NAME"
             android:value="offlineMap" />
@@ -55,6 +55,7 @@
             android:enabled="true"
             android:exported="false"
             android:process=":remote" />
+
         <receiver
             android:name="com.here.services.internal.BootReceiver"
             android:exported="true">

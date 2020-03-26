@@ -1,6 +1,7 @@
 package com.savr.demoheremap
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -60,7 +61,14 @@ class MainActivity : AppCompatActivity(), Map.OnTransformListener {
             return false
         }
         initMap()
+        initView()
         return true
+    }
+
+    private fun initView() {
+        button_download.setOnClickListener {
+            startActivity(Intent(this, AreaActivity::class.java))
+        }
     }
 
     override fun onRequestPermissionsResult(
@@ -163,7 +171,8 @@ class MainActivity : AppCompatActivity(), Map.OnTransformListener {
                                        mapMatched: Boolean) {
 
             currentPosition = geoPosition.coordinate
-
+            val position = "${currentPosition!!.latitude},${currentPosition!!.longitude}"
+            textViewLocationInfo.text = position
             map?.setCenter(
                 geoPosition.coordinate,
                 Map.Animation.BOW
